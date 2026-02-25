@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'OK', message: 'API is running' });
+  res.status(200).json({ status: 'OK', message: 'API is running v1' });
 });
 
 // Middleware endpoint that forwards to CloudToLocalSync
@@ -41,7 +41,7 @@ app.post('/CloudToLocalSync', async (req, res) => {
 
     // Make the POST request to the external API
     const response = await axios.post(
-      `${BASE_URL}/CloudToLocalSync`,
+      `https://exceltable-demo.genial365.com/api/CloudToLocalSync`,
       resumeData,
       {
         params: { subUrl },
