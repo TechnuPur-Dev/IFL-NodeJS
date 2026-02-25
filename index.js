@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Base URL for the external API
-const BASE_URL = 'https://exceltable-demo.genial365.com';
+const BASE_URL = 'https://exceltable-demo.genial365.com/api';
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
